@@ -1,5 +1,5 @@
 # Fdb version 3
-["lualatex"] 1618958153 "testeememoir2.tex" "testeememoir2.pdf" "testeememoir2" 1618958154
+["lualatex"] 1618958153 "testeememoir2.tex" "testeememoir2.pdf" "testeememoir2" 1618959773
   "/home/aeschylus/.texlive2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1613410974 123118 cc76c43a45c6775928bac28d290536e0 ""
   "/home/aeschylus/.texlive2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc" 1613411168 124086 93985445eeeb6eae7e511496bcbe6e31 ""
   "/home/aeschylus/.texlive2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman17-regular.luc" 1614219764 124704 a07483cad18154cf5d60390030300bb0 ""
@@ -43,7 +43,7 @@
   "testeememoir2.tex" 1618958148 755 1dd52b7a451d8f32310c6d62194f81c5 ""
   "testeememoir2.toc" 1618958154 228 95452f255bc1be688f0c0509049ce616 "lualatex"
   (generated)
-  "testeememoir2.pdf"
   "testeememoir2.aux"
   "testeememoir2.log"
+  "testeememoir2.pdf"
   "testeememoir2.toc"

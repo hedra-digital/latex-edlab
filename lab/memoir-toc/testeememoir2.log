@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.6.21)  20 APR 2021 19:35
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.6.21)  20 APR 2021 20:04
  restricted system commands enabled.
 **testeememoir2.tex
 (./testeememoir2.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.163 seconds
+luaotfload | main : initialization completed in 0.172 seconds
 (./memoir.cls
 Document Class: memoir 2018/12/12 v3.7h configurable book, report, article docum
 ent class

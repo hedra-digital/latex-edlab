@@ -1,0 +1,137 @@
+%%%%%%%%%%%%%%%%Sumário
+
+\renewcommand\printtoctitle[1]{}
+
+\makeatletter
+\newcommand\l@mypart[3]{%
+  \vskip2ex%
+  \par\noindent
+  \parbox{2.5em}{\hfill{\cftpartpagefont#2}}
+  \hspace*{1em}
+  \parbox{\dimexpr\textwidth-5.5em-15pt\relax}{\cftpartfont#1}\par%
+}
+
+\renewcommand*\l@part[2]{%
+  \l@mypart{#1}{#2}{\partname}%
+}
+
+
+\newcommand\l@mysection[3]{%
+  \vskip2ex%
+  \par\noindent
+  \parbox{2.5em}{\hfill{}}
+  \hspace*{1em}
+  \parbox{\dimexpr\textwidth-5.5em-15pt\relax}{\cftsectionfont#1}\par%
+}
+
+\renewcommand*\l@section[2]{%
+  \l@mysection{#1}{#2}{\sectionname}%
+}
+
+
+\makeatother
+
+%%%%%%%%%%Layout chapter e section
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+[display]
+{\normalfont\textbl} 
+ {\normalfont\chaptertitlename\space\thechapter}
+  {20pt}
+  {\flushleft}
+
+  \titlespacing*{\chapter}{0pt}{-.2cm}{3cm}
+
+
+\titleformat{\section}
+[display]
+{\normalfont\bfseries}
+ {\normalfont\sectiontitlename\space\thesection}
+  {20pt}
+  {\baselineskip=.7\baselineskip\flushleft}
+
+\titlespacing*{\section}{0pt}{.5cm}{.5cm}
+
+%%%%%%%%%%%%%%%%Formato quoting
+
+\usepackage{quoting}[]
+\quotingsetup{font={footnotesize}, indentfirst=false, rightmargin=0ex}
+%\quotingsetup{vskip=0pt}
+
+%%%%%%%%%%%%%%%%Forçar indentação
+
+\newcommand{\forceindent}{\leavevmode{\parindent=1,4em\indent}}
+
+
+
+%%%%%%%%%%%%%%%%Permitir asterisco como footnote
+
+\makeatletter
+
+\def\footnotetext{\def\@thefnmark{\noindent*}\@footnotetext}
+
+\def\footnotetextt{\def\@thefnmark{\noindent**}\@footnotetext}
+
+\def\footnoterule{\kern-8\p@
+  \hrule \@width 2in \kern 7.6\p@} % the \hrule is .4pt high
+%\skip\footins=10mm\@plus3mm\@minus5mm
+\makeatother
+
+%%%%%%%%%%%%%%%%Fonte nota de rodapé
+
+\renewcommand{\thefootnote}{\noindent\scriptsize\arabic{footnote}}
+
+
+%%%%%%%%%%%%%%%%Permitir qualquer tamanho de fonte
+
+\usepackage{anyfontsize}
+
+%%%%%%%%%%%%%%%%Footnote sem traço divisor
+
+\usepackage{footmisc}
+
+\renewcommand*\footnoterule{}
+
+
+%%%%%%%%%%%%%%%%Definindo fontes a serem usadas no livro
+
+\setparaheadstyle{\Fakt\large\bfseries}
+
+\usepackage{fontspec}
+
+\newfontfamily\Fakt{Fakt-Normal.otf}[
+ItalicFont = Fakt-NormalItalic.otf ,
+BoldFont = Fakt-SemiBold.otf ]
+
+\newfontface\textlt{FaktProLight.otf}
+
+
+\setmainfont{FreightTextProBook-Regular.ttf}[
+ItalicFont = FreightTextProBook-Italic.ttf ,
+BoldFont = FreightTextProBold-Regular.ttf ,
+BoldItalicFont = FreightTextProBold-Italic.ttf]
+
+\newfontface\textbl{FreightTextProSemibold-Regular.ttf}
+
+
+%%%%%%%%%%%%%%%%%Alterar fonte da numeração de página e disposição do header
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LE]{\footnotesize\Fakt \thepage\quad \bullet\quad \tiny\Fakt\textlt POVO EM LÁGRIMAS, POVO EM ARMAS}
+\fancyfoot[RO]{\tiny\Fakt\textlt\leftmark\quad \bullet\quad \footnotesize\Fakt\thepage}
+
+%\fancyfoot[CE]{\tiny\Fakt\textlt POVO EM LÁGRIMAS, POVO EM ARMAS}
+%\fancyfoot[CO]{\tiny\Fakt\textlt \leftmark }
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{chapter}{
+\fancyhf{}
+\fancyfoot[LE,RO]{\scriptsize\Fakt \thepage}
+}
+%------------------------------------------------
+
+
+

@@ -1,0 +1,175 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ASTERISCO PARA FOOTNOTE %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\def\@xfootnote[#1]{%
+  \protected@xdef\@thefnmark{#1}%
+  \@footnotemark\@footnotetext}
+\makeatother
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%%%% FONTES %%%%%%
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fontspec}
+
+%fonte principal
+\setmainfont{Linux Libertine O}
+
+%Estilo da numeração
+\defaultfontfeatures{Numbers={Proportional,OldStyle}}
+
+%Novas fontes
+\newfontfamily\Formular{Formular-Regular}[
+BoldFont = Formular-Bold.otf] 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% SÍMBOLO PARA ASTERISCO %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\asterisc}{{\centering\adforn{47}\par}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% FORÇAR INDENTAÇÃO %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\forceindent}{\leavevmode{\parindent=1,5em\indent}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% INCLUIR EPIGRAFE EM PART %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\oldafterpartskip\afterpartskip 
+
+\newcommand\partepigraph[3][60pt]{
+\renewcommand{\afterpartskip}{
+\vskip#1
+\epigraph{#2}{#3}
+\vfil}
+}
+\newcommand\removeepigraph{
+  \let\afterpartskip\oldafterpartskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% GERAR BLANK PAGE %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{0}%
+    \newpage}
+
+
+
+\RequirePackage{textcomp}
+\RequirePackage{relsize}
+\RequirePackage{bm}
+\RequirePackage{fix2col}
+\RequirePackage{fixltx2e}
+\RequirePackage{lastpage}
+
+
+% implementações do Verse.sty
+\newcommand{\qb}[1]{\hfil\break\mbox{}\hfill\hbox{\textnormal{[}\,#1}}
+\newcommand{\tamanhoverso}[1]{\settowidth{\versewidth}{#1}}
+
+
+% Tamanho da fonte
+\newcommand{\fonte}[2][\fontsize]{{\fontsize{#1}{\baselineskip}\selectfont #2}}
+
+
+% estabelece que catítulos começarao à esquerda
+\newcommand{\oneside}{
+\makeatletter
+\renewcommand\chapter{\if@openright\clearpage\else\clearpage\fi
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother}
+
+\newcommand{\twoside}{
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother}
+
+
+
+
+% fala
+\newcommand{\fala}[1]{\noindent\hskip-2ex\textsc{#1} --}
+
+% secpoem         
+\newcommand{\secpoem}[1]{%
+				{\centering
+				\Large\textsc{#1}
+				\par}
+     			}
+
+
+\newcommand\sectioncenter[1]{%
+   \par\addvspace{1ex}%
+   \bgroup\centering\Large\scshape #1%
+   \par\nobreak\egroup\par\nobreak%
+   \addvspace{.2ex}%
+}
+
+
+
+% paginabranca 
+\newcommand{\paginabranca}{\newpage\hbox{~}\thispagestyle{empty}\newpage}
+
+% ordinais
+\newcommand{\ai}{\textsuperscript{a}}
+\newcommand{\oi}{\textsuperscript{o}}
+
+% Número romano
+\newcommand{\romano}[1]{\textsc{{\romannumeral#1}}}
+
+% comandinho para aumentar ou diminuir a mancha
+\newcommand*\EP[1][-1]{\enlargethispage*{#1\baselineskip}}
+
+% bibliohedra 
+\RequirePackage{ifthen}
+\newcommand{\tit}[1]{\item[\MakeTextLowercase{\textsc{#1}}]}
+\newcommand{\titidem}{\item[\line(1,0){25}]}
+
+\newenvironment{bibliohedra}[1][bibliografia]{%
+    \frenchspacing\footnotesize
+	\ifthenelse{\equal{#1}{}}%
+        {\relax}{\section*{\MakeTextLowercase{#1}}\vspace{2ex}}
+		\begin{list}{}{
+				\setlength\leftmargin{4mm}	% identação do texto principal em
+								% relação à margem da 'página'
+				\setlength\rightmargin{0mm}
+				\setlength\labelwidth{4mm}	% tamanho "esperado" da caixa de rótulo
+								% define também o recuo usado
+		%
+		%		\setlength\listparindent{3mm}	% tamanho da identação dos parágrafos
+								% dentro do ítem
+		%
+				\setlength\labelsep{0mm}	% espaço entre rótulo e descrição
+				\setlength\parsep{0mm}		% espaço entre parágrafos de um item
+				\setlength\itemsep{1mm}		% espaço entre items
+				\setlength\lineskip{0mm}	% espaçamento entre linhas
+		}
+
+	}%
+	{\end{list}}
+
+
+    

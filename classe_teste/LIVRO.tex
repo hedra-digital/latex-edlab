@@ -1,9 +1,10 @@
-\documentclass[semcabeco,compontinhos,showtrims,12pt,spreadimages]{memoir}
-\usepackage[baruch]{hedrastyles}
-\usepackage[chicagofootnotes,14x21]{edlab}
-\usepackage{penalidades}
-\usepackage{graficos}
-\usepackage{fichatecnica}
+\documentclass[semcabeco,trimframe,compontinhos,showtrims,12pt,spreadimages]{memoir}
+%\usepackage[baruch]{hedrastyles}
+\usepackage{edlab}
+\usepackage{lipsum}
+%\usepackage{penalidades}
+%\usepackage{graficos}
+%\usepackage{fichatecnica}
 \usepackage{gitrevisioninfo}
 
 
@@ -13,6 +14,13 @@
 
 \begin{document}
 
-\include{INPUTS}
+\chapter{Lipsum}
+
+\lipsum[1] Footnote here.\footnote{\lipsum[3]}%\lipsum[4-30]
+% \include{INPUTS}
+
+\asterisc
+
+\lipsum[4]
 
 \end{document}

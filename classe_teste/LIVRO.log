@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.6.21)  30 APR 2021 13:23
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.6.21)  30 APR 2021 13:25
  restricted system commands enabled.
 **LIVRO.tex
 (./LIVRO.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.179 seconds
+luaotfload | main : initialization completed in 0.178 seconds
 (/usr/share/texlive/texmf-dist/tex/latex/memoir/memoir.cls
 Document Class: memoir 2018/12/12 v3.7h configurable book, report, article docum
 ent class
@@ -387,7 +387,6 @@ Package tocvsec2 [2008/07/23] emulated by memoir.
 Package verbatim [2008/07/23] emulated by memoir.
 Package verse [2008/07/23] emulated by memoir.
 )
-(./fichatecnica.sty) (./gitrevisioninfo.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count138
@@ -608,7 +607,7 @@ File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
 )
 
 LaTeX Warning: Unused global option(s):
-    [semcabeco,compontinhos,spreadimages].
+    [spreadimages].
 
 (./LIVRO.aux)
 \openout1 = LIVRO.aux
@@ -781,13 +780,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 )
 
 Here is how much of LuaTeX's memory you used:
- 15103 strings out of 494291
+ 15061 strings out of 494291
  100000,552014 words of node,token memory allocated
  1135 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 5 glue, 3 kern, 1 glyph, 9 attribute, 185 glue_spec
 , 9 attribute_list, 2 write nodes
    avail lists: 2:435,3:137,4:10,5:204,6:30,7:2977,8:2,9:230,10:9,11:156
- 19083 multiletter control sequences out of 65536+600000
+ 19055 multiletter control sequences out of 65536+600000
  64 fonts using 9150511 bytes
  44i,11n,63p,283b,446s stack positions out of 5000i,500n,10000p,200000b,100000s
 </usr/share/texmf/fonts/opentype/public/lm/lmsans8-regular.otf></usr/share/texmf

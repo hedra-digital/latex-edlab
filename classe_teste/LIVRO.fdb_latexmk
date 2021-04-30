@@ -1,5 +1,5 @@
 # Fdb version 3
-["lualatex"] 1619799835 "LIVRO.tex" "LIVRO.pdf" "LIVRO" 1619799839
+["lualatex"] 1619799900 "LIVRO.tex" "LIVRO.pdf" "LIVRO" 1619799904
   "/home/aeschylus/.texlive2019/texmf-var/luatex-cache/generic/fonts/otl/lmmono12-regular.luc" 1613411640 77563 a42f9b548398ec7cb5693267702a33dc ""
   "/home/aeschylus/.texlive2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc" 1613424176 132115 90e4dad8d5da713d7bde2ad645ff33f1 ""
   "/home/aeschylus/.texlive2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1613410974 123118 cc76c43a45c6775928bac28d290536e0 ""
@@ -84,15 +84,13 @@
   "/usr/share/texmf/fonts/opentype/public/lm/lmsans8-regular.otf" 1254938640 94256 a52a5407fe2a4281f96a01e9736568c3 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1592757371 4549418 4593509275c90822931a1b14bc17851e ""
   "/var/lib/texmf/web2c/luatex/lualatex.fmt" 1592757403 1382400 61f834af55561eec2094227bbea47d72 ""
-  "LIVRO.aux" 1619799838 2215 19b6cd483e4f9147b09386ebb2b3a8f4 "lualatex"
-  "LIVRO.tex" 1619799732 482 90b2062fe519f50287336fabbff6cf70 ""
-  "LIVRO.toc" 1619799838 1014 7546598060bbd4d5b929ed43f3eff95f "lualatex"
+  "LIVRO.aux" 1619799903 2215 19b6cd483e4f9147b09386ebb2b3a8f4 "lualatex"
+  "LIVRO.tex" 1619799897 461 bbc3e4178112d46dbe58d3238dcd20b9 ""
+  "LIVRO.toc" 1619799903 1014 7546598060bbd4d5b929ed43f3eff95f "lualatex"
   "MUSSUMIPSUM.tex" 1619799828 17209 83bb214c5dd62e7557c1f2a379c8fa75 ""
-  "fichatecnica.sty" 1619191256 1988 d97fe65d0f173d7879f85bb0c6ed3277 ""
-  "gitrevisioninfo.sty" 1619191256 35 c396b1351da0e8aa03251b68d1c98c70 ""
   "image.jpeg" 1619798605 18597 c83aef06d91d3d98ef9fdfb8f2ec913a ""
   (generated)
+  "LIVRO.aux"
   "LIVRO.pdf"
   "LIVRO.toc"
-  "LIVRO.aux"
   "LIVRO.log"

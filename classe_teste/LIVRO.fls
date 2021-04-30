@@ -30,10 +30,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/delarray.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 INPUT /home/aeschylus/.texlive2019/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc
-INPUT ./fichatecnica.sty
-INPUT ./fichatecnica.sty
-INPUT ./gitrevisioninfo.sty
-INPUT ./gitrevisioninfo.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty

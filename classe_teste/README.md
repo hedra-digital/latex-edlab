@@ -15,7 +15,7 @@ LIVRO.tex  # Preâmbulos (classe, pacotes, comandos exporáticos; referência a 
 		ARQUIVO_DE_TEXTO_B.tex
 		ARQUIVO_DE_TEXTO_C.tex
 		ARQUIVO_DE_TEXTO_D.tex
-	   [MUSSUMIPSUM.tex]		# Arquivo LIPSUM genérico 
+	       [MUSSUMIPSUM.tex]		# Arquivo LIPSUM genérico 
 		PUBLICIDADE.tex	   		# [lista de livros publicados]
 		ULTIMAPAGINA.tex   		# [colofon]
 

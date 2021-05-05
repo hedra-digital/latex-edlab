@@ -2,11 +2,11 @@
 \contentsline {book}{\booknumberline {I}\textsc {Testis nossis}, Mussum Ipsum}{3}% 
 \contentsline {part}{\partnumberline {I}Amor é fogo que arde sem se ver}{5}% 
 \contentsline {chapter}{\chapternumberline {1}É um não querer mais que bem querer}{7}% 
-\contentsline {section}{\numberline {1.1}É solitário andar por entre a gente}{7}% 
-\contentsline {subsection}{\numberline {1.1.1}É nunca contentar-se de contente}{8}% 
-\contentsline {subsubsection}{\numberline {1.1.1.1}Posuere libero varius}{9}% 
-\contentsline {paragraph}{\numberline {1.1.1.1.1}É cuidar que se ganha em se perder}{10}% 
-\contentsline {subparagraph}{\numberline {1.1.1.1.1.1}É querer estar preso por vontade}{12}% 
-\contentsline {subparagraph}{\numberline {1.1.1.1.1.2}É querer estar preso por vontade}{13}% 
-\contentsline {subparagraph}{\numberline {1.1.1.1.1.3}É querer estar preso por vontade}{14}% 
-\contentsline {subparagraph}{\numberline {1.1.1.1.1.4}É querer estar preso por vontade}{15}% 
+\contentsline {section}{É solitário andar por entre a gente}{7}% 
+\contentsline {subsection}{É nunca contentar-se de contente}{8}% 
+\contentsline {subsubsection}{Posuere libero varius}{9}% 
+\contentsline {paragraph}{É cuidar que se ganha em se perder}{10}% 
+\contentsline {subparagraph}{É querer estar preso por vontade}{12}% 
+\contentsline {subparagraph}{É querer estar preso por vontade}{13}% 
+\contentsline {subparagraph}{É querer estar preso por vontade}{14}% 
+\contentsline {subparagraph}{É querer estar preso por vontade}{15}% 

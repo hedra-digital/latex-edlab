@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.6.21)  30 APR 2021 13:25
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2020.6.21)  5 MAY 2021 16:45
  restricted system commands enabled.
 **LIVRO.tex
 (./LIVRO.tex
@@ -48,7 +48,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.178 seconds
+luaotfload | main : initialization completed in 0.210 seconds
 (/usr/share/texlive/texmf-dist/tex/latex/memoir/memoir.cls
 Document Class: memoir 2018/12/12 v3.7h configurable book, report, article docum
 ent class
@@ -612,20 +612,20 @@ LaTeX Warning: Unused global option(s):
 (./LIVRO.aux)
 \openout1 = LIVRO.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -708,7 +708,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 [6]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 39.
+(Font)              <5> on input line 40.
  [7
 
 ]
@@ -716,16 +716,13 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Class memoir Warning: The material used in the headers is too large
 (15.21004pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 99.
+(in both cases you will find help in the memoir manual). on input line 101.
 
 
 Overfull \vbox (0.71004pt too high) has occurred while \output is active []
 
 
 [8]
-Underfull \vbox (badness 2310) has occurred while \output is active []
-
-
 Overfull \vbox (0.71004pt too high) has occurred while \output is active []
 
 
@@ -733,7 +730,7 @@ Overfull \vbox (0.71004pt too high) has occurred while \output is active []
 <image.jpeg, id=39, 190.7125pt x 265.99374pt>
 File: image.jpeg Graphic file (type jpg)
 <use image.jpeg>
-Package luatex.def Info: image.jpeg  used on input line 180.
+Package luatex.def Info: image.jpeg  used on input line 182.
 (luatex.def)             Requested size: 191.5pt x 267.10112pt.
 
 Overfull \vbox (0.71004pt too high) has occurred while \output is active []
@@ -763,7 +760,7 @@ Overfull \vbox (0.71004pt too high) has occurred while \output is active []
 Class memoir Warning: The material used in the headers is too large
 (15.21004pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 23.
+(in both cases you will find help in the memoir manual). on input line 21.
 
 
 Overfull \vbox (0.71004pt too high) has occurred while \output is active []
@@ -785,7 +782,7 @@ Here is how much of LuaTeX's memory you used:
  1135 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 5 glue, 3 kern, 1 glyph, 9 attribute, 185 glue_spec
 , 9 attribute_list, 2 write nodes
-   avail lists: 2:435,3:137,4:10,5:204,6:30,7:2977,8:2,9:230,10:9,11:156
+   avail lists: 2:399,3:131,4:10,5:202,6:31,7:2953,8:2,9:221,10:9,11:156
  19055 multiletter control sequences out of 65536+600000
  64 fonts using 9150511 bytes
  44i,11n,63p,283b,446s stack positions out of 5000i,500n,10000p,200000b,100000s
@@ -797,7 +794,7 @@ egular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr
 /share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fon
 ts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/pub
 lic/lm/lmroman12-bold.otf>
-Output written on LIVRO.pdf (15 pages, 73956 bytes).
+Output written on LIVRO.pdf (15 pages, 73868 bytes).
 
 PDF statistics: 116 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream

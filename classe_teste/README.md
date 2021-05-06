@@ -37,3 +37,14 @@ https://us02web.zoom.us/rec/share/m2gXTRsFztetm_gNDZxRDvDVBRzhwsfPY-gkaANlL_cItw
 
 Senha de acesso: !!!LaTeX!!13
 ```
+
+
+```
+Tópico: LaTeX: Estruturando arquivos
+Horário de Início da Reunião : 5 mai. 2021 03:03
+
+Gravação da reunião:
+https://us02web.zoom.us/rec/share/IFsE_zC2JuwBg185Qii6P8_xv53EE1ZUPo3XVfV_rLXXRuQHvIx6PlLK43Qs_7jy.GJ9txm88hSQYw2Ow
+
+Senha de acesso: !!LaTeX13!!
+```

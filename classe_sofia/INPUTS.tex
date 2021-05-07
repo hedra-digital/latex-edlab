@@ -1,0 +1,37 @@
+% Este documento tem a ver com as partes do LIVRO. 
+
+
+
+\input{PAGINAUM.tex}       % [Frontistício]
+\input{PAGINADOIS.tex}     % [Créditos]
+\input{PAGINATRES.tex}     % [folha de rosto]
+
+% nothing			is level -1
+% \chapter 			is level 0
+% \section 			is level 1
+% \subsection 		is level 2
+% \subsubsection 	is level 3
+% \paragraph 		is level 4
+% \subparagraph 	is level 5
+\setcounter{secnumdepth}{-1}
+\setcounter{tocdepth}{0}
+
+\tableofcontents*
+
+\input{MUSSUMIPSUM}
+% \input{TEXTO.tex}
+
+% Indice remissivo (package: `\usepackage{makeidx}` e no início do arquivi `\makeindex`
+% \printindex
+
+% Indice
+% \renewcommand{\contentsname}{Índice}
+% \setcounter{tocdepth}{3}
+% \tableofcontents
+
+% Notas de fim (package: \usepackage{endnotes})
+% \endnotes
+
+
+\input{PUBLICIDADE.tex}	   % [lista de livros publicados]
+\input{ULTIMAPAGINA.tex}   % [colofon]

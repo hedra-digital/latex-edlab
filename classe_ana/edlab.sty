@@ -1,0 +1,604 @@
+
+% PARTES DO LIVRO                             A001
+% arquivos : paginaum.tex     [Frontistício]
+%            paginadois.tex   [Créditos]
+%            paginatres.tex   [folha de rosto]
+%            ultimapagina.tex [colofon]
+%            INPUT.tex   
+%
+% fontes                                      F001
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% ASTERISCO PARA FOOTNOTE %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\def\@xfootnote[#1]{%
+  \protected@xdef\@thefnmark{#1}%
+  \@footnotemark\@footnotetext}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%
+%%%%% FONTES %%%%%%
+%%%%%%%%%%%%%%%%%%%
+
+\usepackage{fontspec}  % F001
+
+%fonte principal
+\setmainfont{Linux Libertine O}
+
+%Estilo da numeração
+\defaultfontfeatures{Numbers={Proportional,OldStyle}}
+
+%Novas fontes
+\newfontfamily\Formular{Formular-Regular}[BoldFont = Formular-Bold.otf] 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% SÍMBOLO PARA ASTERISCO %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\asterisc}{{\centering\adforn{47}\par}}
+%\newcommand{\asterisc}{\vspace{-1ex}\begin{center} ***\vspace{-2ex}\end{center}}
+%\newcommand{\asterisc}{\vspace{-1ex}\begin{center} \adforn{47}\end{center}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%% FORÇAR INDENTAÇÃO %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\forceindent}{\leavevmode{\parindent=1,5em\indent}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% INCLUIR EPIGRAFE EM PART %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\oldafterpartskip\afterpartskip 
+
+\newcommand\partepigraph[3][60pt]{
+\renewcommand{\afterpartskip}{
+\vskip#1
+\epigraph{#2}{#3}
+\vfil}
+}
+\newcommand\removeepigraph{
+  \let\afterpartskip\oldafterpartskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% GERAR BLANK PAGE %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{0}%
+    \newpage}
+
+
+
+\RequirePackage{textcomp}
+\RequirePackage{relsize}
+\RequirePackage{bm}
+\RequirePackage{fix2col}
+\RequirePackage{fixltx2e}
+\RequirePackage{lastpage}
+
+
+% implementações do Verse.sty
+\newcommand{\qb}[1]{\hfil\break\mbox{}\hfill\hbox{\textnormal{[}\,#1}}
+\newcommand{\tamanhoverso}[1]{\settowidth{\versewidth}{#1}}
+
+
+% Tamanho da fonte
+\newcommand{\fonte}[2][\fontsize]{{\fontsize{#1}{\baselineskip}\selectfont #2}}
+
+
+% estabelece que catítulos começarao à esquerda
+\newcommand{\oneside}{
+\makeatletter
+\renewcommand\chapter{\if@openright\clearpage\else\clearpage\fi
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother}
+
+\newcommand{\twoside}{
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+                    \thispagestyle{plain}%
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother}
+
+
+
+
+% fala
+\newcommand{\fala}[1]{\noindent\hskip-2ex\textsc{#1} --}
+
+% secpoem         
+\newcommand{\secpoem}[1]{%
+				{\centering
+				\Large\textsc{#1}
+				\par}
+     			}
+
+
+\newcommand\sectioncenter[1]{%
+   \par\addvspace{1ex}%
+   \bgroup\centering\Large\scshape #1%
+   \par\nobreak\egroup\par\nobreak%
+   \addvspace{.2ex}%
+}
+
+% comandinho para aumentar ou diminuir a mancha
+\newcommand*\EP[1][-1]{\enlargethispage*{#1\baselineskip}}
+
+% bibliohedra 
+\RequirePackage{ifthen}
+\newcommand{\tit}[1]{\item[\MakeTextLowercase{\textsc{#1}}]}
+\newcommand{\titidem}{\item[\line(1,0){25}]}
+
+\newenvironment{bibliohedra}[1][bibliografia]{%
+    \frenchspacing\footnotesize
+	\ifthenelse{\equal{#1}{}}%
+        {\relax}{\section*{\MakeTextLowercase{#1}}\vspace{2ex}}
+		\begin{list}{}{
+				\setlength\leftmargin{4mm}	% identação do texto principal em
+								% relação à margem da 'página'
+				\setlength\rightmargin{0mm}
+				\setlength\labelwidth{4mm}	% tamanho "esperado" da caixa de rótulo
+								% define também o recuo usado
+		%
+		%		\setlength\listparindent{3mm}	% tamanho da identação dos parágrafos
+								% dentro do ítem
+		%
+				\setlength\labelsep{0mm}	% espaço entre rótulo e descrição
+				\setlength\parsep{0mm}		% espaço entre parágrafos de um item
+				\setlength\itemsep{1mm}		% espaço entre items
+				\setlength\lineskip{0mm}	% espaçamento entre linhas
+		}
+
+	}%
+	{\end{list}}
+
+
+
+    
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  % Opcoes: pdftex, xetex, <nome de fontes>
+\RequirePackage{lettrine}
+\RequirePackage{ulem}
+\RequirePackage{comment,lipsum}
+\RequirePackage{adforn}
+\RequirePackage{hifensextras}
+\RequirePackage[para*]{manyfoot}
+\RequirePackage[stable,multiple]{footmisc}
+\RequirePackage{textcase}
+\RequirePackage{etoolbox}
+\RequirePackage{xifthen}
+
+
+
+% correções nas notas
+  \RequirePackage{footnote}
+  \renewcommand*{\footnoterule}{\vfill
+    \kern 11pt%
+    \hrule width 0.3\columnwidth
+  \kern 11pt}
+
+  %reset das notas
+%  \pretocmd{\@schapter}{\setcounter{footnote}{0}}{}{}
+%  \pretocmd{\@chapter}{\setcounter{footnote}{0}}{}{}
+
+
+% Notas não vão para o toc
+\newcommand{\footnoteInSectionStyle}[1]{\NoCaseChange{\linespread{1.0}\mbox{}\protect\Footnote{{\Large\protect\raisebox{-3pt}{$^\ast$}}}{#1}}}
+\newcommand\footnoteInSection{\ifx\protect\@typeset@protect\expandafter\footnoteInSectionStyle\else\expandafter\@gobble\fi}
+
+% Epígraph (aceitando notas)
+\newlength\epigraphminimallength
+\AtEndOfClass{
+  %\settowidth\epigraphminimallength{\@epitext}
+  \renewcommand{\epigraph}[2]{
+  \settowidth\epigraphminimallength{#1}
+  \begin{savenotes}\vspace{\beforeepigraphskip}
+  {\epigraphsize\begin{\epigraphflush} 
+  \begin{minipage}{\epigraphwidth}
+    \ifthenelse{\dimtest{\epigraphminimallength}{>=}{\epigraphwidth}}{\@epitext{#1}}{\@epitext{\hfill#1}}
+    %\@epitext{\hfill#1}
+    \vspace{5pt} \@episource{#2}
+    \end{minipage}\end{\epigraphflush}
+    \vspace{\afterepigraphskip}}\end{savenotes}}
+\epigraphtextposition{flushleft}
+\epigraphsourceposition{flushright}
+\epigraphfontsize{\footnotesize}
+\setlength{\epigraphrule}{0pt}
+\setlength{\epigraphwidth}{.7\textwidth}}
+
+
+% Quote 
+% tamanho dentro do hedraquote 
+\newcommand{\hedraquotesize}{\small}
+\newcommand{\hedraquoteauthorsize}{\footnotesize}
+
+
+\renewenvironment{quote}[1][]{%
+  \def\@quoteauthor{#1}%
+  \begin{list}{}{%
+    \setlength{\listparindent}{3ex}%
+    \setlength{\labelsep}{0mm}%
+    \setlength{\leftmargin}{0mm}%
+    \setlength{\rightmargin}{0mm}%
+    \setlength{\topsep}{1ex}
+    \setlength{\partopsep}{0mm}
+    \setlength{\parskip}{0mm}
+    \setlength{\lineskip}{0mm}
+    \setlength{\parsep}{0ex}%
+    }%
+    \hedraquotesize%
+    \item%
+}{%
+  \end{list}%
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%% OPÇÕES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\DeclareOption{chicagofootnotes}{\makeatletter
+  \renewcommand\@makefntext[1]{\frenchspacing 
+    \parindent 1em% 
+    \@thefnmark.~#1}
+    % endnotes
+    \newcommand\enoteformat{\parindent 1em\theenmark.~}    
+  \makeatother}
+
+
+\DeclareOption{notasdefim}{%
+\AtEndOfClass{\RequirePackage{endnotes}
+\def\notesname{Notas}
+\def\enoteheading{\chapter{\notesname}}%
+\let\footnote\endnote
+}}
+
+\DeclareOption{fontimpact}{\AtEndOfClass{\newfontfamily\fontespecial{Impact}}}
+\DeclareOption{Biolinum}{\AtEndOfClass{\newfontfamily\fontespecial{Linux Biolinum O}}}
+\DeclareOption{noendpart}{\renewcommand{\@endpart}{\vspace{.60\textheight}\pagebreak}}          
+
+\ProcessOptions
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PENALIDADES                                    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\linepenalty=100
+%%%%the penalty for breaking a page after a line within a paragraph
+%%%
+\hyphenpenalty=50
+%%%%the penalty for line breaking at an automatically inserted hyphen
+%%%
+\exhyphenpenalty=50
+%%%%the penalty for line breaking at an explicit hyphen
+%%%
+\binoppenalty=700
+%%%%the penalty for breaking a line at a binary operator
+%%%
+\relpenalty=500
+%%%%the penalty for breaking a line at a relation
+%%%
+\clubpenalty=150
+%%%%extra penalty for breaking after first line of a paragraph
+%%%
+%\widowpenalty=10000
+%%%%extra penalty for breaking before last line of a paragraph
+%%%
+\displaywidowpenalty=50
+%%%%extra penalty for breaking before last line before a display math
+%%%
+\brokenpenalty=100
+%%%%extra penalty for page breaking after a hyphenated line
+%%%
+\predisplaypenalty=10000
+%%%%penalty for breaking before a display
+%%%
+\postdisplaypenalty=0
+%%%%penalty for breaking after a display
+%%%
+\floatingpenalty = 20000
+%%%%penalty for splitting an insertion (can only be split footnote in standard LaTeX)
+%%%%e-tex adds some additional penalties (that are not set by default in LaTeX) but are supported by all three of the major engines
+%%%
+\interlinepenalties = 2 8000 8000
+%%%%%An extension to \interlinepenalty that allows different penalties to be added
+%%%%after each line. It takes a space separated list of numbers as value. If n is
+%%%%positive interlinepenalties n i1... in specifies the penalty to be used after
+%%%%each of the lines in a paragraph, with the last value being repeated as often
+%%%%as needed if the paragraph has more then n lines.
+%%%
+%
+\clubpenalties = 2 8000 600
+%%\clubpenalties
+%%%An extension of \clubpenalty with the same syntax as \interlinepenalties.
+%%
+\widowpenalties = 3 10000 9000 6000 
+%%%An extension of \widowpenalty with the same syntax as \interlinepenalties (lines arecounted backwards from the last line in this case).
+%%
+\displaywidowpenalties = 2 8000 5000 
+%%%An extension of \widowpenalty with the same syntax as \widowpenalties with lines counted backwards from each display math within a paragraph.
+%
+%%XeTeX supports one additional primitive penalty:
+%
+%\XeTeXlinebreakpenalty=0
+%%The full documentation of which is Inter-character linebreak penalty I believe it is the penalty inserted between characters for Asian typesetting which typically doesn't use inter-word spaces.
+%
+%%Other penalties are inserted by the format for example LaTeX defines a count
+%
+%\newcount\interfootnotelinepenalty \interfootnotelinepenalty=100
+%%but locally arranges that \linepenalty is set to this value while setting footnotes.
+%
+%%Similarly article class sets
+%
+%\@lowpenalty   51
+%\@medpenalty  151
+%\@highpenalty 301
+%%which are the values used by \pagebreak[1] ...
+%
+%%\samepage works by setting many of these penalties to "infinite" values:
+%
+%\def\samepage{\interlinepenalty\@M
+%   \postdisplaypenalty\@M
+%   \interdisplaylinepenalty\@M
+%   \@beginparpenalty\@M
+%   \@endparpenalty\@M
+%   \@itempenalty\@M
+%   \@secpenalty\@M
+%   \interfootnotelinepenalty\@M}
+%%Note penalties are not just numeric values they are actual nodes that are
+%%inserted into the horizontal or vertical list. they can be inspected with
+%%\lastpenalty or removed (in some contexts) with \unpenalty so for example
+%%\count0=\lastpenalty will put the value of the penalty (even if it was
+%%automatically inserted) into the count register if the penalty s the last thing
+%%in the current horizontal or vertical list.
+%
+%%For example this bit of LaTeX which tries to insert italic corrections without disturbing the penalties in the horizontal list
+%
+%\def \fix@penalty {%
+%  \ifnum \lastpenalty=\z@
+%    \@@italiccorr
+%  \else
+%    \count@ \lastpenalty
+%    \unpenalty
+%    \@@italiccorr
+%    \penalty \count@
+%  \fi
+%}
+%This is part of all the commands such as \textit that try to insert automatic italic correction.
+
+%Demerits
+
+%The statement above that TeX tries to minimise penalties is in fact a
+%simplification. For line breaking, the actual quantity that is minimised is
+%demerits which is (more or less) the sum of the squares of the penalties
+%associated with the linebreaks in a paragraph and the badness of each line
+%(which is a measure of how much white space has been stretched beyond its
+%specified limits) plus three additional demerit parameters as described below.
+%The exact formula is in the TeXBook, but isn't usually relevant.
+
+%The three demerit parameters and the default values given to them by LaTeX are:
+
+%\doublehyphendemerits=10000
+%Additional demerit added to the paragraph for each pair of consecutive lines ending in a discretionary (typically a hyphen).
+
+%\finalhyphendemerits=5000
+%Additional demerit added if the penultimate line ends with a discretionary.
+
+%\adjdemerits=10000
+%Additional demerit added for pairs of "incompatible" lines (ie a tight line in
+%which white space is squeezed next to a loose line in which white space is
+%stretched.)
+
+%Note, the values of demerit parameters are typically large (they combine with
+%the square of penalty and badness units) also demerits are just a value used in
+%the line breaking calculation. Unlike penalties they do not correspond to nodes
+%that may be manipulated in TeX lists.
+
+
+% Básicas
+\tolerance=500
+\emergencystretch=1pc
+\lefthyphenmin=2
+\righthyphenmin=2
+
+\raggedbottom
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Opções de formato
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \setbinding{9mm}
+  \stockaiv 
+  %\setstocksize{230mm}{160mm}
+  \settrimmedsize{230mm}{160mm}{*}
+  \isopage[13]
+  %\settypeblocksize{*}{115mm}{1.6}
+%  \setlrmargins{*}{*}{1.6}
+%  \setulmargins{*}{*}{0.6}
+  \setheadfoot{10mm}{12mm}
+  %\setheaderspaces{8mm}{*}{0.16}
+
+\begin{comment}
+
+\DeclareOption{vieira}{%
+  \setbinding{9mm}
+  \stockaiv 
+  %\setstocksize{230mm}{160mm}
+  \settrimmedsize{230mm}{160mm}{*}
+  \isopage[13]
+  %\settypeblocksize{*}{115mm}{1.6}
+%  \setlrmargins{*}{*}{1.6}
+%  \setulmargins{*}{*}{0.6}
+  \setheadfoot{10mm}{12mm}
+  %\setheaderspaces{8mm}{*}{0.16}
+}
+
+\DeclareOption{almeida}{%
+  \setbinding{5mm}
+  \stockaiv 
+  \settrimmedsize{210mm}{137mm}{*}
+  \settypeblocksize{*}{90mm}{1.7}
+  \setlrmargins{*}{*}{1.2}
+  \setulmargins{*}{*}{1.7}
+%  \setheadfoot{5mm}{10mm}
+%  \setheaderspaces{*}{*}{0}
+  \headsep=5mm
+  \raggedbottom
+}
+
+\DeclareOption{Kalinka}{%
+  \setbinding{3mm}
+  \stockaiv 
+  %\setstocksize{210mm}{140mm}{*}
+  \settrimmedsize{210mm}{140mm}{*}
+  \settypeblocksize{170.5mm}{96.8mm}{*}
+  \setlrmargins{18.6mm}{*}{1}
+  \setulmargins{15.8mm}{*}{1}
+  \setheadfoot{5mm}{10mm}
+  \setheaderspaces{0mm}{*}{0}
+  \headsep=2mm
+}
+
+\DeclareOption{16x23}{%
+  \setbinding{5mm}
+  \stockaiv 
+  %\setstocksize{230mm}{160mm}
+  \settrimmedsize{230mm}{160mm}{*}
+  %\settypeblocksize{*}{115mm}{1.6}
+  \isopage[13]
+  \setlrmargins{16mm}{*}{1}
+  \setulmargins{24mm}{*}{1}
+  \setheadfoot{10mm}{12mm}
+  %\setheaderspaces{8mm}{*}{0.16}
+}
+
+
+
+\DeclareOption{14x21}{%
+  \setbinding{3mm}
+  \stockaiv 
+  %\setstocksize{210mm}{140mm}{*}
+  \settrimmedsize{210mm}{140mm}{*} %137
+  \settypeblocksize{172mm}{109mm}{*}
+  \setlrmargins{12mm}{*}{1}
+  \setulmargins{14mm}{*}{1}
+  \setheadfoot{5mm}{10mm}
+  \setheaderspaces{0mm}{*}{0}
+  \headsep=2mm
+}
+
+\DeclareOption{14x22}{%
+  \setbinding{3mm}
+  \stockaiv 
+  %\setstocksize{210mm}{140mm}{*}
+  \settrimmedsize{220mm}{140mm}{*}
+  \settypeblocksize{176mm}{109mm}{*}
+  \setlrmargins{12mm}{*}{1}
+  \setulmargins{14mm}{*}{1}
+  \setheadfoot{5mm}{10mm}
+  \setheaderspaces{0mm}{*}{0}
+  \headsep=2mm
+}
+
+\DeclareOption{14x21b}{%
+  \setbinding{3mm}
+  \stockaiv 
+  %\setstocksize{210mm}{140mm}{*}
+  \settrimmedsize{210mm}{140mm}{*}
+  \settypeblocksize{165mm}{100mm}{*}
+  \setlrmargins{16mm}{*}{1}
+  \setulmargins{14mm}{*}{1}
+  \setheadfoot{5mm}{10mm}
+  \setheaderspaces{0mm}{*}{0}
+  \headsep=2mm
+}
+
+\DeclareOption{largepost}{%
+  \setbinding{3mm}
+  \stockaiv 
+  \settrimmedsize{210mm}{133mm}{*}
+  \settypeblocksize{*}{97mm}{1.7}
+  \setlrmargins{*}{*}{1.2}
+  \setulmargins{*}{*}{1.7}
+%  \setheadfoot{5mm}{10mm}
+%  \setheaderspaces{*}{*}{0}
+  \headsep=5mm
+}
+
+\DeclareOption{bolso}{%
+  \setbinding{5mm}
+  \stockaiv 
+  \settrimmedsize{175mm}{113mm}{*}
+  \settypeblocksize{*}{86mm}{1.7}
+  \setlrmargins{*}{*}{1.2}
+  \setulmargins{*}{*}{1.7}
+%  \setheadfoot{5mm}{10mm}
+  \setheaderspaces{*}{*}{0}
+  \headsep=5pt
+}
+
+\DeclareOption{whitman}{%
+  \setbinding{5mm}
+  \stockaiv 
+  \settrimmedsize{260mm}{170mm}{*}
+  %\settypeblocksize{*}{86mm}{1.7}
+  %\setheadfoot{5mm}{10mm}
+  \isopage[13]
+  \setlrmargins{*}{18.5mm}{1.5}
+  \setulmargins{29mm}{*}{1.5}
+  \setlength{\trimtop}{20mm}
+  \setlength{\trimedge}{\stockwidth} 
+  \addtolength{\trimedge}{-\paperwidth}
+  \setlength{\trimedge}{0.5\trimedge}
+  %\setheaderspaces{*}{*}{0}
+  %\headsep=5pt
+}
+
+
+
+
+\end{comment}
+
+\DeclareOption{trimframe}{\newcommand{\marcadecorte}{AAAA \trimFrame}}
+\DeclareOption{sembinding}{\setbinding{0mm}}
+\DeclareOption{semcabeco}{
+      \setulmargins{*}{*}{1.9}
+      \headsep=0pt}
+
+\setlength{\trimtop}{20mm}
+\setlength{\trimedge}{\stockwidth} 
+\addtolength{\trimedge}{-\paperwidth}
+\setlength{\trimedge}{0.5\trimedge}
+\quarkmarks
+
+
+\setmarginnotes{0pt}{.25\textwidth}{-3cm}
+
+\ProcessOptions
+\checkandfixthelayout
+
+

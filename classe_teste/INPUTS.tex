@@ -2,19 +2,21 @@
 
 
 
-\input{PAGINAUM.tex}       % [Frontistício]
-\input{PAGINADOIS.tex}     % [Créditos]
-\input{PAGINATRES.tex}     % [folha de rosto]
+\input{1-fronte}       % [Frontistício]
+\input{2-creditos}     % [Créditos]
+\input{3-rosto}	       % [folha de rosto]
 
-% nothing			is level -1
+% nothing			is level -3
+% \book				is level -2
+% \part				is level -1
 % \chapter 			is level 0
 % \section 			is level 1
 % \subsection 		is level 2
 % \subsubsection 	is level 3
 % \paragraph 		is level 4
 % \subparagraph 	is level 5
-\setcounter{secnumdepth}{-1}
-\setcounter{tocdepth}{0}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
 
 \tableofcontents*
 
@@ -29,9 +31,7 @@
 % \setcounter{tocdepth}{3}
 % \tableofcontents
 
-% Notas de fim (package: \usepackage{endnotes})
 % \endnotes
 
-
-\input{PUBLICIDADE.tex}	   % [lista de livros publicados]
-\input{ULTIMAPAGINA.tex}   % [colofon]
+\input{Y-publicidade}	   % [lista de livros publicados]
+\input{Z-colofon}		   % [colofon]

@@ -1,0 +1,28 @@
+% edlab-toc.sty
+
+% \cft... (ver manual memoir, seção 9.2.2, p.153)
+
+%   cap.|   |1|  |Este é um capitulo .........| | 1
+% ---------------------------------------------------
+%                                                   (A) 
+% -----------------------------------------------------
+%   cap.|   |2|  |Este é outro capitulo ......| | 2
+%  (B)   (C)      (D)                    (E)     (F) 
+% -----------------------------------------------------
+%                                                   (G)
+
+% (A) before...skip
+% (B) name
+% (C) numwidth
+% (D) font
+% (E) leader
+% (F) formatpnum
+% (G) parskip
+
+% \renewcommand*{\cftchaptername}{Cap.\space}
+\renewcommand{\cftpartnumwidth}{5em}
+\renewcommand{\cftpartfont}{\normalsize\formular}
+\renewcommand{\cftpartleader}{\dotfill}
+\renewcommand{\cftparskip}{1ex}
+\renewcommand{\cftbeforechapterskip}{10em}
+\renewcommand{\cftpartformatpnum}{\Huge}

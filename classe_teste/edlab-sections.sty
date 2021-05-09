@@ -1,0 +1,80 @@
+\RequirePackage{textcase}
+\RequirePackage{etoolbox}
+
+\makepagestyle{baruch}
+\makeheadstyles{baruch}{%
+% book changes
+\renewcommand*{\booknamefont}{\LARGE}
+\renewcommand*{\booknumfont}{\LARGE}
+\renewcommand*{\booktitlefont}{\LARGE}
+\renewcommand*{\midbookskip}{\par\vskip 2\onelineskip}%
+% part changes
+\renewcommand*{\partnamefont}{\Large}
+\renewcommand*{\partnumfont}{\Large}
+\renewcommand*{\parttitlefont}{\centering\Large\ifdef{\fontespecial}{\fontespecial}{}}
+\renewcommand*{\midpartskip}{\par\vskip 2\onelineskip}%
+% chapter
+\setlength{\beforechapskip}{0mm}%
+\setlength{\afterchapskip}{22mm\@plus2mm\@minus1mm}%
+\renewcommand*{\chapnamefont}{\centering\Large}%
+\renewcommand*{\chapnumfont}{\centering\Large}%
+\renewcommand*{\chaptitlefont}{\Large\ifdef{\fontespecial}{\fontespecial}{}}%
+% section
+\setbeforesecskip{1.2\onelineskip}%
+\setaftersecskip{.35\onelineskip}%
+\setsecheadstyle{\large\baselineskip=.7\baselineskip\centering\scshape\MakeTextLowercase}%
+% subsection
+\setsubsecheadstyle{\MakeTextLowercase{}\centering\small\scshape\MakeTextLowercase}%
+% subsubsection
+\setbeforesubsubsecskip{1\onelineskip}%
+\setaftersubsubsecskip{.2\onelineskip}%
+\setsubsubsecheadstyle{\centering\itshape}%
+% paragraph
+% \setbeforeparaskip{1\onelineskip}%
+% \setafterparaskip{.08\onelineskip}%
+% \setparaheadstyle{\bfseries\small}%
+}
+
+\makepsmarks{baruch}{%
+  \nouppercaseheads
+  \createmark{chapter}{both}{nonumber}{}{}
+  \createmark{section}{right}{nonumber}{}{}
+  \createplainmark{toc}{both}{\contentsname}
+  \createplainmark{lof}{both}{\listfigurename}
+  \createplainmark{lot}{both}{\listtablename}
+  \createplainmark{bib}{both}{\bibname}
+  \createplainmark{index}{both}{\indexname}
+  \createplainmark{glossary}{both}{\glossaryname}}
+
+% Cabeços e rodapés 
+\makeheadposition{baruch}{flushright}{flushleft}{}{}
+\makeevenhead{baruch}{}{\scshape\ifdef{\titcabeco}{\titcabeco}%
+    {\MakeLowercase{\begingroup\def\break{}\booktitle\endgroup}}}{}
+\makeoddhead{baruch}{}{\scshape\MakeLowercase{\leftmark}}{}
+\makeevenfoot{baruch}{}{\footnotesize\thepage}{}{}
+\makeoddfoot{baruch}{}{\footnotesize\thepage}{}{}
+
+%%\makeheadrule{baruch}{\textwidth}{\normalrulethickness}
+
+\makeevenfoot{plain}{}{\footnotesize\thepage}{}{}
+\makeoddfoot{plain}{}{\footnotesize\thepage}{}{}
+
+\makeevenhead{myheadings}{\footnotesize\thepage}{}{\scshape\MakeLowercase{\leftmark}}
+\makeoddhead{myheadings}{\scshape\MakeLowercase{\rightmark}}{}{\footnotesize\thepage}
+\makeheadrule{myheadings}{\textwidth}{\normalrulethickness}
+
+
+\@addtoreset{chapter}{part}
+\copypagestyle{part}{empty}
+\copypagestyle{chapter}{plain}
+
+
+\DeclareOption{semcabeco}{
+  \makeevenhead{baruch}{}{}{}
+  \makeoddhead{baruch}{}{}{}
+  \setulmargins{*}{*}{1.9}\headsep=0pt
+}
+
+\ProcessOptions%
+
+

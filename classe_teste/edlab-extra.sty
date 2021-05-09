@@ -1,0 +1,30 @@
+% edlab-extra.sty
+
+\newcommand{\blankpage}{\newpage\hbox{~}\thispagestyle{empty}\newpage}
+
+
+% Epigraph
+\epigraphfontsize{\footnotesize}			% tamanho da fonte
+\setlength{\epigraphrule}{0pt}				% tira a linha
+% \setlength{\epigraphwidth}{.6\textwidth}	% aumenta o tamanho da epígra
+% \epigraphtextposition{flushright}			
+% \epigraphtextposition{flushleft}
+% \epigraphsourceposition{flushright} 
+
+\renewenvironment{quote}{%
+  \begin{list}{}{%
+    \setlength{\listparindent}{3ex}%
+    \setlength{\labelsep}{0mm}%
+    \setlength{\leftmargin}{0mm}%
+    \setlength{\rightmargin}{0mm}%
+    \setlength{\topsep}{1ex}
+    \setlength{\partopsep}{0mm}
+    \setlength{\parskip}{0mm}
+    \setlength{\lineskip}{0mm}
+    \setlength{\parsep}{0ex}%
+    }%
+    \small%
+    \item%
+}{%
+  \end{list}%
+}

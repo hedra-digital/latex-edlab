@@ -24,7 +24,7 @@
 \usepackage{xcolor}					 	% para texto colorido
 \usepackage[babel]{microtype}			% para ajustes finos na mancha
 \usepackage{enumerate}					% para tipos diferentes de enumeração
-\usepackage{marginnote}					% para notas laterais
+\usepackage{marginnote,titlesec}					% para notas laterais
 %\usepackage{makeidx} 					% para índice remissivo
 
 \usepackage{edlab-penalties}
@@ -51,8 +51,13 @@
 \newfontfamily\formular{Formular}
 \newfontfamily\formularlight{Formular Light}
 \setmainfont[Ligatures=TeX,Numbers=OldStyle]{Linux Libertine O}
+
+
 % Estilos
-\newcommand{\booktitle}{Yitzak Rabin Ltd.}
+\makeoddhead{baruch}{}{\scshape\MakeLowercase{\scshape\MakeTextLowercase{\leftmark}}}{}
+\makeevenhead{baruch}{}{\scshape\MakeLowercase{\parttitle}}{}
+\makeevenfoot{baruch}{}{\footnotesize\thepage}{}
+\makeoddfoot{baruch}{}{\footnotesize\thepage}{}
 \pagestyle{baruch}		
 \headstyles{baruch}
 

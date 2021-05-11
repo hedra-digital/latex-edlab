@@ -57,3 +57,13 @@ https://us02web.zoom.us/rec/share/N0OXQujQ2-Pso_AfLFK1pBkqPQcISqC1Pa7BMvD2OfKlS8
 
 Access Passcode: !!!LaTeT!!13
 ```
+
+## Topic: LaTeX: Apresentação da Nova Classe EdLab
+```
+Date: May 10, 2021 12:47 PM Sao Paulo
+
+Meeting Recording:
+https://us02web.zoom.us/rec/share/CMw7woaCMesZXFTMoQtO4iCtPvs9VLvyo79kROFnSUnzz0agAJHx9DXNv3vcn1S8.yPsNtIJlTm3ssjFs
+
+Access Passcode: !!!LaTeX!!13
+```

@@ -43,3 +43,33 @@ https://us02web.zoom.us/rec/share/m2gXTRsFztetm_gNDZxRDvDVBRzhwsfPY-gkaANlL_cItw
 
 Senha de acesso: !!!LaTeX!!13
 ```
+
+## Topic: LaTeX: Estruturando arquivos
+```
+Start Time : May 5, 2021 03:03 PM
+
+Meeting Recording:
+https://us02web.zoom.us/rec/share/XtPWr6SFd7RqY5HHb6G3j9UOm7aflMXc8gXEEWYYF7jEgM3grFpFI3rOpNQzHO4R.fqfsZGudCtkACdUN
+
+Access Passcode: !!!LaTeX13!!
+```
+
+## Topic: LaTeX: Partes do livro; Entendendo arquivos
+```
+Date: May 7, 2021 12:28 PM Sao Paulo
+
+Meeting Recording:
+https://us02web.zoom.us/rec/share/N0OXQujQ2-Pso_AfLFK1pBkqPQcISqC1Pa7BMvD2OfKlS8sWKcyTmuCZOuLWCtM6.2aaCN4-f1xeHPQDX
+
+Access Passcode: !!!LaTeT!!13
+```
+
+## Topic: LaTeX: Apresentação da Nova Classe EdLab
+```
+Date: May 10, 2021 12:47 PM Sao Paulo
+
+Meeting Recording:
+https://us02web.zoom.us/rec/share/CMw7woaCMesZXFTMoQtO4iCtPvs9VLvyo79kROFnSUnzz0agAJHx9DXNv3vcn1S8.yPsNtIJlTm3ssjFs
+
+Access Passcode: !!!LaTeX!!13
+```

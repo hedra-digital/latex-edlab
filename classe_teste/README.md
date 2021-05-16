@@ -73,3 +73,13 @@ https://us02web.zoom.us/rec/share/CMw7woaCMesZXFTMoQtO4iCtPvs9VLvyo79kROFnSUnzz0
 
 Access Passcode: !!!LaTeX!!13
 ```
+
+----
+
+## Tips
+
+```sh
+# Remove os links internos e fixa \part como a primeira categoria de seções
+$ pandoc -r markdown-auto_identifiers -w latex --top-level-division=part A.md -o A.tex
+```
+

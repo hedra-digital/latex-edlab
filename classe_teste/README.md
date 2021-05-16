@@ -11,12 +11,12 @@ LIVRO.tex  # Preâmbulos (classe, pacotes, comandos exporáticos; referência a 
 		1.fronte.tex       		# [Frontistício]
 		2-creditos.tex     		# [Créditos]
 		3-rosto.tex     		# [folha de rosto]
-		ARQUIVO_DE_TEXTO_A.tex
+		ARQUIVO_DE_TEXTO_A.tex		# Qualquer arquivo
 		ARQUIVO_DE_TEXTO_B.tex
 		ARQUIVO_DE_TEXTO_C.tex
 		ARQUIVO_DE_TEXTO_D.tex
-	   [MUSSUMIPSUM.tex]		# Arquivo LIPSUM genérico 
-		Y-Publicidade.tex	   		# [lista de livros publicados]
+		[MUSSUMIPSUM.tex]		# Arquivo LIPSUM genérico 
+		Y-Publicidade.tex	   	# [lista de livros publicados]
 		Z-Colofon.tex   		# [colofon]
 
 image.png		# imagem modelo
@@ -28,8 +28,8 @@ edlab-penalties		# penalidades para ajustes da mancha de texto
 edlab-sections.sty	# formatação de seções e cabeço
 edlab-toc.sty		# formatação do sumário
 Makefile 		# atalhos de comando. Ex: make; make clean
-.gitignore 	# lista de arquivos ou tipos de arquivos que não vão subir para o github
-gitrevisioninfo.sty 	 	# arquivo criado automaticamente com o número do git
+.gitignore 		# lista de arquivos ou tipos de arquivos que não vão subir para o github
+gitrevisioninfo.sty 	# arquivo criado automaticamente com o número do git
 ```
 
 # Vídeos

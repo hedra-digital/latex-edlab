@@ -3,7 +3,7 @@
 \newcommand{\blankpage}{\newpage\hbox{~}\thispagestyle{empty}\newpage}
 
 
-% url
+% url.sty
 % You can switch the style of printing using “\urlstyle{xx}”, where “xx” can be
 % any defined style. The pre-defined styles are “tt”, “rm”, “sf” and “same” which all
 % allow the same linebreaks but use different fonts — the first three select a specific
@@ -12,7 +12,7 @@
 
 \urlstyle{tt} % {same} mesma fonte; {sf} sem serifa 
 
-% Epigraph
+% Epigraph (memoir)
 \epigraphfontsize{\footnotesize}			% tamanho da fonte
 \setlength{\epigraphrule}{0pt}				% tira a linha
 % \setlength{\epigraphwidth}{.6\textwidth}	% aumenta o tamanho da epígra
@@ -20,6 +20,23 @@
 % \epigraphtextposition{flushleft}
 % \epigraphsourceposition{flushright} 
 
+% Enumerate (enumitem.sty)
+    % • Vertical spacing:
+    %     – topsep
+    %     – partopsep
+    %     – parsep
+    %     – itemsep
+    % • Horizontal spacing:
+    %     – leftmargin
+    %     – rightmargin
+    %     – listparindent
+    %     – labelwidth
+    %     – labelsep
+    %     – itemindent
+
+\setlist[itemize,1]{label={$\triangleright$},leftmargin=5pt,itemsep=0pt,parsep=0pt}
+
+% Quote (latex.ldt)
 \renewenvironment{quote}{%
   \begin{list}{}{%
     \setlength{\listparindent}{3ex}%

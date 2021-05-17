@@ -1,5 +1,5 @@
 all:
-	echo "ATENÇÃO: COLOCAR AS FONTES DA PASTA ~/.fonts
+	echo "ATENÇÃO: COLOCAR AS FONTES DA PASTA ~/.fonts"
 	fc-cache -f -v
 timesnewroman:
 	sudo apt install ttf-mscorefonts-installer

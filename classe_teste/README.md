@@ -43,6 +43,8 @@ https://us02web.zoom.us/rec/share/m2gXTRsFztetm_gNDZxRDvDVBRzhwsfPY-gkaANlL_cItw
 
 Senha de acesso: !!!LaTeX!!13
 ```
+**Resumo**: montei a estrutura de alguns tipos de poemas para explicar como fazer pesquisa e usar manuais.
+* 0'-22' Poemas, verso livre, uso do texdoc (manual), ativando pacotes 
 
 ## Topic: LaTeX: Estruturando arquivos
 ```

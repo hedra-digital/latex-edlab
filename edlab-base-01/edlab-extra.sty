@@ -1,9 +1,13 @@
 % edlab-extra.sty
 
-\newenvironment{argumento}{%                % Didascálias antes de \part
-            \pagebreak%
+
+% Didascálias
+\def\@endpartnot{\vspace{.60\textheight}\pagebreak}%
+\let\@endpart\@endpartnot
+\newenvironment{argumento}{%                % Didascálias antes de \part 
+            %\pagebreak%
             \blankAtodd\mbox{}%
-            %\baselineskip=.7\baselineskip%
+            \baselineskip=.7\baselineskip%
             \vfill%
             \thispagestyle{empty}%
             \footnotesize\parindent0pt}{\par} 

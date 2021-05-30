@@ -1,7 +1,22 @@
 % edlab-extra.sty
 
-\newcommand{\blankpage}{\newpage\hbox{~}\thispagestyle{empty}\newpage}
+\newenvironment{argumento}{%                % Didascálias antes de \part
+            \pagebreak%
+            \blankAtodd\mbox{}%
+            %\baselineskip=.7\baselineskip%
+            \vfill%
+            \thispagestyle{empty}%
+            \footnotesize\parindent0pt}{\par} 
+\newenvironment{didascalia}{%               % Resumos de abertura de capítulo
+            \footnotesize
+            %\baselineskip=.7\baselineskip
+            \raggedright
+            \parindent0pt}{\par\medskip} 
 
+
+\newcommand{\blankpage}{\newpage\hbox{~}\thispagestyle{empty}\newpage}
+\newcommand{\blankAteven}{\ifodd\thepage\relax\else\blankpage\fi}
+\newcommand{\blankAtodd}{\ifodd\thepage\blankpage\else\relax\fi}
 
 % url.sty
 % You can switch the style of printing using “\urlstyle{xx}”, where “xx” can be

@@ -85,3 +85,21 @@ Access Passcode: !!!LaTeX!!13
 $ pandoc -r markdown-auto_identifiers -w latex --top-level-division=part A.md -o A.tex
 ```
 
+----
+
+## Etapas para diagramar um livro do zero a partir de um template (classe)
+
+1. Ter em mãos o template
+1. Vefiricar se o template está rodando na sua máquina
+1. Copiar a pasta nova
+1. Iniar o git (git init)
+1. Criar um projeto no github
+1. Comitar e dar push
+1. Converter os originais para .md e editar com pandoc
+1. Converter os mds (markdowns) para LaTeX com pandoc  (lembrar de coloar "--top-level-division=chapter")
+1. Editar o arquivo INPUTS.tex para apontar o novo arquivo (lembre-se de tirar o MUSSUMIPSUM)
+1. Rodar/Compilar o LaTeX
+1. (Não está rodando?) Debugar (colocar apenas uma parte do texto e ver se funciona)
+1. Comitar e dar push
+1. Editar as primeiras e últimas páginas 
+	

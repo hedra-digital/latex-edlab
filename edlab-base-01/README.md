@@ -102,4 +102,50 @@ $ pandoc -r markdown-auto_identifiers -w latex --top-level-division=part A.md -o
 1. (Não está rodando?) Debugar (colocar apenas uma parte do texto e ver se funciona)
 1. Comitar e dar push
 1. Editar as primeiras e últimas páginas 
+
+## Conhecimentos básicos
+
+```
+Ferramentas utilizadas para edição em LaTeX
+	LaTeX (Linguagem de markup. Ex: Markdown, CSS)
+		Texlive (Linux; Mac)
+		??? (Mac)
+	Editor de texto 
+		Sublime (Linux)
+		Hyper (Mac)
+	Instalador de software
+		aptget (Linux) 
+		brew (Mac)
+	Versificador de código
+		git (Linux; Mac)
+		github (repositório na web)
+		gitkraken (visualizador gráfico)
+	Leitor de PDF
+		Acrobat
+		evince (Linux)
+	Comparar versões
+		meld (Linux; Mac) para código
+		diffpdf (Linux) para pdf
+
+Conhecimento básico
+	Navegação em terminal de comando
+		~   	\home
+		cd  	change directory
+		mkdir 	make directory
+		cd ..	pula para o diretório anterior
+		cd ~ 	pula para a home
+		pwd 	onde estou?
+		cp 		copiar arquivo cp A B (renomear) cp A ~/Desktop (mover)
+		ls 		lista os arquivos que estão na pasta
+
+	Git (versificador)
+		comandos básicos
+			git init 					começar a gravar as versões 
+			git clone					clonar um projeto do github
+			git add						colocar a versão no envelope
+			git commit -m "mensagem"	colar uma etiqueta com o nome da revisão
+			git push					enviar para o github o texto
+			git pull					puxar o texto atualizado 
+```
+
 	

@@ -103,7 +103,7 @@ $ pandoc -r markdown-auto_identifiers -w latex --top-level-division=part A.md -o
 1. Comitar e dar push
 1. Editar as primeiras e últimas páginas 
 
-## Conhecimentos básicos
+## Ferramentas e conhecimentos básicos básicos
 
 ```
 Ferramentas utilizadas para edição em LaTeX

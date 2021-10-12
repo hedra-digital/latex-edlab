@@ -1,7 +1,13 @@
 all:
-	echo "ATENÇÃO: COLOCAR AS FONTES DA PASTA ~/.fonts"
 	fc-cache -f -v
-timesnewroman:
-	sudo apt install ttf-mscorefonts-installer
-libertine:
-	sudo apt-get install -y fonts-linuxlibertine
+link:
+	ln -s texmf/tex/fonts/ ~/.fonts
+linuxli-bertine:
+	sudo apt-get install fonts-linuxlibertine
+fonts-chines:
+	sudo apt-get install ttf-wqy-microhei
+copy:
+	mkdir -p ~/.fonts
+	cp * ~/.fonts
+
+
